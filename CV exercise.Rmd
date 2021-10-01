@@ -1,0 +1,48 @@
+---
+name: Mingcong
+surname: Pan
+position: "PhD student"
+address: "Department of Political Science, UW-Madison"
+phone: +1 22 3333 4444
+www: test.com
+email: "mingcong.pan@wisc.edu"
+twitter: mingcongpan
+github: mingcongpan
+linkedin: mingcongpan
+date: "`r format(Sys.time(), '%B %Y')`"
+output: vitae::hyndman
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(vitae)
+```
+
+# Some stuff about me
+
+ * This is an exercise for course PS 811
+
+# Education
+
+```{r}
+library(tibble)
+tribble(
+  ~ Degree, ~ Year, ~ Institution, ~ Where,
+  "PhD in Political Science", "2020--", "University of Wisconsin-Madison", "Madison, WI",
+  "Master of Economics", "2017", "London School of Economics", "London, UK",
+  "Bachelor of Economics and Finance", "2016", "University of Hong Kong", "Hong Kong"
+) %>% 
+  detailed_entries(Degree, Year, Institution, Where)
+```
+
+# Prizes
+
+```{r}
+tribble(
+  ~Year, ~Type, ~Desc,
+  2020, "University Fellowship", "UW-Madison"
+) %>% 
+  brief_entries(Year, Type, Desc
+  )
+```
+
